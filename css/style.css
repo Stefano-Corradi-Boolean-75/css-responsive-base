@@ -1,0 +1,87 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* test 1 - mobile first */
+.test-1 .box{
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+  background-color: blue;
+}
+
+@media screen and (min-width: 479px){
+  .test-1{
+    display: flex;
+  }
+  .test-1 .box{
+    background-color: red;
+  }
+  .test-1 .box:first-child{
+    margin-right: 0;
+  }
+}
+
+/* test 2 - desktop first */
+.test-2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.test-2 img{
+  width: 200px;
+  border: 1px solid red;
+  padding: 5px;
+  margin: 10px;
+}
+
+@media (max-width:780px){
+  .test-2{
+    flex-wrap: wrap;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width:568px){
+  .test-2{
+    flex-direction: column;
+  }
+}
+
+/* test 3 - desktop first */
+
+.test-3 .item{
+  width: 300px;
+  height: 300px;
+  background-color: blue;
+  margin: 10px;
+}
+
+@media (max-width:479px){
+  .test-3 .item{
+    border-radius: 50%;
+  }
+}
+
+/* test 4 - desktop first */
+.test-4 .banner{
+  height: 300px;
+  margin: 20px;
+  background-color: blue;
+}
+
+@media (max-width:479px){
+  .test-4 .banner{
+    background-color: green;
+  }
+}
+
+@media (min-width:1441px){
+  .test-4 .banner{
+    background-color: red;
+  }
+}
